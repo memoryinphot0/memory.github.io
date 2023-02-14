@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Web Page</title>
+	<style>
+		.button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 12px 24px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		function updateTime() {
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			document.getElementById('time').innerHTML = hours + ":" + minutes + ":" + seconds;
+		}
+		setInterval(updateTime, 1000);
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Welcome to my dynamic web page</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<h2>Current Time</h2>
+			<p>The current time is: <span id="time"></span></p>
+			<button class="button">Learn More</button>
+		</section>
+		<section>
+			<h2>My Projects</h2>
+			<ul>
+				<li><a href="#">Project 1</a></li>
+				<li><a href="#">Project 2</a></li>
+				<li><a href="#">Project 3</a></li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Web Page</p>
+	</footer>
+</body>
+</html>
